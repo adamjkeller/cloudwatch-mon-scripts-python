@@ -183,7 +183,7 @@ class Metrics:
 
         for idx_start in xrange(0, size, AWS_LIMIT_METRICS_SIZE):
             idx_end = idx_start + AWS_LIMIT_METRICS_SIZE
-            response = conn.put_metric_data('System/Linux',
+            response = conn.put_metric_data('AWS/EC2',
                                             self.names[idx_start:idx_end],
                                             self.values[idx_start:idx_end],
                                             datetime.datetime.utcnow(),
